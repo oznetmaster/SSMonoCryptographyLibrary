@@ -1,0 +1,216 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FCFE9FB-5939-4AE8-B5E4-F7A836645AB9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSMonoCryptographyLibrary</RootNamespace>
+    <AssemblyName>SSMonoCryptographyLibrary</AssemblyName>
+    <ProjectTypeGuids>{0B4745B0-194B-4BB6-8E21-E9057CA92500};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>SmartDeviceProject1</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SSHARP;NETCF_3_5;NETCF;NET_2_0;SECURITY_DEP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <NoWarn>3021</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowedReferenceRelatedFileExtensions>.allowedReferenceRelatedFileExtensions</AllowedReferenceRelatedFileExtensions>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FileAlignment>512</FileAlignment>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DefineConstants>SSHARP;NETCF_3_5;NETCF;NET_2_0;SECURITY_DEP</DefineConstants>
+    <NoWarn>3021</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="SimplSharpCustomAttributesInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpCustomAttributesInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpHelperInterface, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpHelperInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SimplSharpReflectionInterface, Version=1.0.5542.22550, Culture=neutral, PublicKeyToken=1099c178b3b54c3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\ProgramData\Crestron\SDK\SimplSharpReflectionInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="SSharpCrestronExtensionsLibrary, Version=1.0.0.20479, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SSharpCrestronExtensionsLibrary\SSharpCrestronExtensionsLibrary\bin\Release\SSharpCrestronExtensionsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SSharpReflectionExtensionsLibrary, Version=1.0.0.20457, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SSharpReflectionExtensionsLibrary\SSharpReflectionExtensionsLibrary\bin\Release\SSharpReflectionExtensionsLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SSMonoSupportLibrary, Version=1.0.0.15349, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SSMonoSupportLibrary\bin\Release\SSMonoSupportLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SSMonoTupleLibrary, Version=1.0.0.20438, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SSMonoTupleLibrary\SSMonoTupleLibrary\bin\Release\SSMonoTupleLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aes.cs" />
+    <Compile Include="AesCryptoServiceProvider.cs" />
+    <Compile Include="AesManaged.cs" />
+    <Compile Include="AesTransform.cs" />
+    <Compile Include="AsymmetricAlgorithm.cs" />
+    <Compile Include="AsymmetricKeyExchangeDeformatter.cs" />
+    <Compile Include="AsymmetricKeyExchangeFormatter.cs" />
+    <Compile Include="AsymmetricSignatureDeformatter.cs" />
+    <Compile Include="AsymmetricSignatureFormatter.cs" />
+    <Compile Include="Base64Constants.cs" />
+    <Compile Include="Mono.Math\BigInteger.cs" />
+    <Compile Include="CryptoAPITransform.cs" />
+    <Compile Include="DES.cs" />
+    <Compile Include="DESCryptoServiceProvider.cs" />
+    <Compile Include="DSASignatureDeformatter.cs" />
+    <Compile Include="DSASignatureFormatter.cs" />
+    <Compile Include="MACTripleDES.cs" />
+    <Compile Include="Mono.Security\BitConverterLE.cs" />
+    <Compile Include="CipherMode.cs" />
+    <Compile Include="ConfidenceFactor.cs" />
+    <Compile Include="Consts.cs" />
+    <Compile Include="CryptoConfig.cs" />
+    <Compile Include="CryptoConfig_2_1.cs.cs" />
+    <Compile Include="CryptoConvert.cs" />
+    <Compile Include="CryptographicException.cs" />
+    <Compile Include="CryptographicUnexpectedOperationException.cs" />
+    <Compile Include="CryptoKeySecurity.cs" />
+    <Compile Include="CryptoStream.cs" />
+    <Compile Include="CryptoStreamMode.cs" />
+    <Compile Include="CryptoTools.cs" />
+    <Compile Include="CspKeyContainerInfo.cs" />
+    <Compile Include="CspParameters.cs" />
+    <Compile Include="CspProviderFlags.cs" />
+    <Compile Include="DerivedBytes.cs" />
+    <Compile Include="DSA.cs" />
+    <Compile Include="DSACryptoServiceProvider.cs" />
+    <Compile Include="Mono.Security\Mono.Security.Cryptography\DSAManaged.cs" />
+    <Compile Include="DSAParameters.cs" />
+    <Compile Include="FromBase64Transform.cs" />
+    <Compile Include="HashAlgorithm.cs" />
+    <Compile Include="HMAC.cs" />
+    <Compile Include="HMACMD5.cs" />
+    <Compile Include="HMACSHA1.cs" />
+    <Compile Include="HMACSHA256.cs" />
+    <Compile Include="HMACSHA384.cs" />
+    <Compile Include="HMACSHA512.cs" />
+    <Compile Include="ICryptoTransform.cs" />
+    <Compile Include="ICspAsymmetricAlgorithm.cs" />
+    <Compile Include="KeyedHashAlgorithm.cs" />
+    <Compile Include="KeyNumber.cs" />
+    <Compile Include="KeyPairPersistence.cs" />
+    <Compile Include="KeySizes.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="MD5CryptoServiceProvider.cs" />
+    <Compile Include="MiniParser.cs" />
+    <Compile Include="Mono.Security\ASN1.cs" />
+    <Compile Include="Mono.Security\ASN1Convert.cs" />
+    <Compile Include="Mono.Security\Mono.Security.Cryptography\HMACAlgorithm.cs" />
+    <Compile Include="Mono.Security\Mono.Security.Cryptography\MACAlgorithm.cs" />
+    <Compile Include="NextPrimeFinder.cs" />
+    <Compile Include="PaddingMode.cs" />
+    <Compile Include="PasswordDeriveBytes.cs" />
+    <Compile Include="PKCS1.cs" />
+    <Compile Include="PrimalityTests.cs" />
+    <Compile Include="PrimeGeneratorBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomNumberGenerator.cs" />
+    <Compile Include="RC2.cs" />
+    <Compile Include="RC2CryptoServiceProvider.cs" />
+    <Compile Include="Rfc2898DeriveBytes.cs" />
+    <Compile Include="Rijndael.cs" />
+    <Compile Include="RijndaelManaged.cs" />
+    <Compile Include="RijndaelManagedTransform.cs" />
+    <Compile Include="RNGCryptoServiceProvider.cs" />
+    <Compile Include="RSA.cs" />
+    <Compile Include="RSACryptoServiceProvider.cs" />
+    <Compile Include="RSAManaged.cs" />
+    <Compile Include="RSAOAEPKeyExchangeDeformatter.cs" />
+    <Compile Include="RSAOAEPKeyExchangeFormatter.cs" />
+    <Compile Include="RSAParameters.cs" />
+    <Compile Include="RSAPKCS1KeyExchangeDeformatter.cs" />
+    <Compile Include="RSAPKCS1KeyExchangeFormatter.cs" />
+    <Compile Include="RSAPKCS1SignatureDeformatter.cs" />
+    <Compile Include="RSAPKCS1SignatureFormatter.cs" />
+    <Compile Include="SecureString.cs" />
+    <Compile Include="SecurityParser.cs" />
+    <Compile Include="SequentialSearchPrimeGeneratorBase.cs" />
+    <Compile Include="SHA1.cs" />
+    <Compile Include="SHA1CryptoServiceProvider.cs" />
+    <Compile Include="SHA1Managed.cs" />
+    <Compile Include="SHA256.cs" />
+    <Compile Include="SHA256Managed.cs" />
+    <Compile Include="SHA384.cs" />
+    <Compile Include="SHA384Managed.cs" />
+    <Compile Include="SHA512.cs" />
+    <Compile Include="SHA512Managed.cs" />
+    <Compile Include="SHAConstants.cs" />
+    <Compile Include="SignatureDescription.cs" />
+    <Compile Include="SmallXmlParser.cs" />
+    <Compile Include="SymmetricAlgorithm.cs" />
+    <Compile Include="SymmetricTransform.cs" />
+    <Compile Include="ToBase64Transform.cs" />
+    <Compile Include="TripleDES.cs" />
+    <Compile Include="TripleDESCryptoServiceProvider.cs" />
+    <None Include="Properties\ControlSystem.cfg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{0B4745B0-194B-4BB6-8E21-E9057CA92500}">
+        <ProgramIdTag>SSMonoCryptographyLibrary</ProgramIdTag>
+        <SystemName>SSMonoCryptographyLibrary</SystemName>
+        <Programmer />
+        <ArchiveFilename>C:\Projects\Crestron\Simpl# Libraries\SSMonoCryptographyLibrary\SSMonoCryptographyLibrary\bin\Debug\SSMonoCryptographyLibrary.clz</ArchiveFilename>
+        <MinFirmwareVersion>1.007.0017</MinFirmwareVersion>
+        <CompiledOn>5/12/2016 5:50:47 AM</CompiledOn>
+        <AdditionalInfo />
+        <EmbedSourceArchive>False</EmbedSourceArchive>
+        <CopyTo />
+        <OriginalReferenceSources>
+          <Reference sourceFilename="../../SSMonoSupportLibrary/bin/Release/SSMonoSupportLibrary.dll" referenceName="SSMonoSupportLibrary" />
+          <Reference sourceFilename="../../SSharpReflectionExtensionsLibrary/SSharpReflectionExtensionsLibrary/bin/Release/SSharpReflectionExtensionsLibrary.dll" referenceName="SSharpReflectionExtensionsLibrary" />
+          <Reference sourceFilename="../../SSharpCrestronExtensionsLibrary/SSharpCrestronExtensionsLibrary/bin/Release/SSharpCrestronExtensionsLibrary.dll" referenceName="SSharpCrestronExtensionsLibrary" />
+          <Reference sourceFilename="../../SSMonoTupleLibrary/SSMonoTupleLibrary/bin/Release/SSMonoTupleLibrary.dll" referenceName="SSMonoTupleLibrary" />
+        </OriginalReferenceSources>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
